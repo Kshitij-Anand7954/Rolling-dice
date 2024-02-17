@@ -1,16 +1,16 @@
 
+import 'package:first_app/dice_roller.dart';
 import 'package:flutter/material.dart';
+
 
 var startAlignment=Alignment.topLeft;
 var endAlignment=Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget{
-  const GradientContainer(this.color1,this.color2 , {super.key});
+ const GradientContainer(this.color1,this.color2 , {super.key});
   final Color color1;
   final Color color2;
-  void Rolldice(){
-
-  }
+ 
  @override
  Widget build(context){
   return Container(
@@ -21,13 +21,8 @@ class GradientContainer extends StatelessWidget{
               end: endAlignment,
             ),
           ),
-          child:  Center(
-            child: Column(children: [Image.asset('assets/images/dice-4.png',
-            width: 200,
-            ),
-            TextButton(onPressed: Rolldice, child: const Text('Roll dice'),)
-            ],
-            ) 
+          child:  const Center(
+            child: DiceRoller(),  
           ),
         );
 
